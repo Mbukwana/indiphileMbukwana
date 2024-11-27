@@ -1,5 +1,5 @@
 # indiphileMbukwana
-This is my portfolio created to present my skill,Achievement,and Education
+This is my portfolio website created to present my skill,achievement,and education.
 # About
 
 portfolio link
