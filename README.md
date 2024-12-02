@@ -2,8 +2,11 @@
 This is my portfolio website created to present my Skill,Achievement,and Education.
 # Overview
 Built using an HTML/CSS and JavaScript
+
 Includes sections on Home,Education, SKills,and About Me
+
 Include links to my Facebook,Email,and Linkedin
+
 Also my phone number is included for calls
 # Tools Used
 CodePen
