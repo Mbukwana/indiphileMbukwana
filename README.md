@@ -1,39 +1,35 @@
-# indiphileMbukwana
-This is my portfolio website created to present my Skill,Achievement,and Education.
-# Overview
-Built using an HTML/CSS and JavaScript
+Indiphile Mbukwana
+Portfolio Website
+This is my portfolio website, designed to showcase my skills, achievements, and education.
 
-Includes sections on Home,Education, SKills,and About Me
-
-Include links to my Facebook,Email,and Linkedin
-
-Also my phone number is included for calls
-# Tools Used
+Overview
+Built Using: HTML, CSS, and JavaScript.
+Features:
+Sections: Home, Education, Skills, and About Me.
+Links to my social profiles: Facebook, Email, and LinkedIn.
+Contact information, including my phone number for direct calls.
+Tools Used
 CodePen
-
 Chrome Browser
-
-HTML
-
+HTML5
 CSS
-
 Git
 Visual Studio Code
-# Installation and Setup
-Download and Install any browser that supports HTML 5: Chrome, Edge, etc
+Installation and Setup
+Browser
 
-Download and Install any code editor: Visual Studio Code, Notepad++, etc
+Install a browser that supports HTML5 (e.g., Chrome, Edge, etc.).
+Code Editor
 
-Download and Install Git Bash
-# How to Run the Project
-By clicking my portfolio link
+Download and install any code editor (e.g., Visual Studio Code, Notepad++).
+Git
 
- # Contact Me
+Download and install Git Bash for version control.
+How to Run the Project
+You can view my portfolio by clicking this link:
+➡️ My Portfolio
+
+Contact Me
 Email: indiphilembukwana@gmail.com
-
-Linkedin: https://www.linkedin.com/in/indiphile-mbukwana-a617202a1/
-
-Github:https//github.com/Mbukwana/indiphileMbukwana
-
-# portfolio link
-https://mbukwana.github.io/indiphileMbukwana/
+LinkedIn: Indiphile Mbukwana
+GitHub: Mbukwana Repository
