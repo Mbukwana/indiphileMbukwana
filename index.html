@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio - Indiphile Mbukwana</title>
-    <!-- External font import -->
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
-    <!-- External FontAwesome CSS for social icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Link to external CSS file (assumed to be 'styles.css') -->
+    <link href="https://fonts.googleapis.com/css2?family=Indiphile+Mbukwana:wght@500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="hero" id="home">
-        <nav>
-           
-            <ul>
+        <nav class="navbar">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#education">Education</a></li>
@@ -27,28 +29,26 @@
         <div class="content" >
             <!-- Profile Picture -->
             <div class="profile-pic-container">
-                <img src="pic.JPG" alt="Leyla Memmedova" class="profile-pic">
+                <img src="pic.JPG" alt="Indiphile Mbukwana" class="profile-pic"> 
+            </div>
             </div>
             <h4>Hello, my name is</h4>
             <h1>Indiphile <span>Mbukwana</span></h1>
-            <h3>I am a Web Developer</h3>
-            <!-- Download CV button -->
+            <h3>I am a Web Developer</h3><p>.
             <div class="download-cv">
-                <a href="RESUME ...pdf" download="Indiphile_Mbukwana_CV" class="btn">Download CV</a>
+                <a href="Indiphile Mbukwana CV.docx" class="btn">Download CV</a>
             </div>
-            
         </div>
         <div class="share">
             <p>Let's Connect</p>
             <div class="social">
-                <a href="https://www.facebook.com/mbukwana.indiphileindie">indiphilembukwane@gmail.com</a></P>
-                <P>Phone: 0655176820</P>//"><i class="fab fa-facebook-f"></i></a>
+                <a href="mailto:indiphilembukwane@gmail.com">indiphilembukwane@gmail.com</a>
+                <p>Phone: 0655176820</p>
+                <a href="https://www.facebook.com/mbukwana.indiphileindie"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.linkedin.com/in/indiphile-mbukwana-a617202a1/"><i class="fab fa-linkedin-in"></i></a>
-
             </div>
         </div>
     </div>
-    </>
 
     <section class="about-section" id="about">
         <div class="about-box">
@@ -56,34 +56,33 @@
             <h3>
                 As an IT graduate, I am a highly motivated and detail-oriented individual with a strong foundation in computer science and information technology. I possess a deep understanding of software development, network administration, database management, and cybersecurity principles. Throughout my academic journey, I have gained hands-on experience in coding languages such as Python, Java, and C++, and have worked with various tools and technologies for system analysis, design, and troubleshooting.
 
-I am adept at problem-solving, with a proven ability to analyze complex issues and develop efficient solutions. My communication and collaboration skills allow me to work effectively within teams and contribute to diverse projects. Eager to stay ahead of emerging trends in the IT industry, I am committed to continuous learning and growth.
+                I am adept at problem-solving, with a proven ability to analyze complex issues and develop efficient solutions. My communication and collaboration skills allow me to work effectively within teams and contribute to diverse projects. Eager to stay ahead of emerging trends in the IT industry, I am committed to continuous learning and growth.
 
-With a passion for technology and innovation, I am equipped to contribute to dynamic environments and help drive organizational success through IT-driven strategies.
+                With a passion for technology and innovation, I am equipped to contribute to dynamic environments and help drive organizational success through IT-driven strategies.
             </h3>
         </div>
     </section>
-    
 
     <section class="education-section" id="education">
-        <h1> <i class="fas fa-graduation-cap"></i> Education</h1>
+        <h1><i class="fas fa-graduation-cap"></i> Education</h1>
         <div class="education-container">
             <div class="education-item">
                 <h2>Diploma in Information Technology</h2>
                 <p>Walter Sisulu University, 2019 - 2021</p>
-                <p>Graduated with First-Class , specializing in software development and design principles.</p>
+                <p>Graduated with First-Class, specializing in software development and design principles.</p>
             </div>
             <div class="education-item">
                 <h2>National Senior Certificate</h2>
-                <p>Qumbu Village high</q> - 2018</p>
-                <p>Focused on Mathematics, and Science</p>
+                <p>Qumbu Village High - 2018</p>
+                <p>Focused on Mathematics and Science</p>
             </div>
         </div>
     </section>
 
-    <!-- soft skills Section -->
     <section class="skills-section" id="skills">
         <div class="skills-container soft-skills">
             <h1><i class="fas fa-users"></i> Soft Skills</h1>
+            <!-- [Previous soft skills content] -->
             <div class="skill">
                 <span>Teamwork</span>
                 <div class="progress">
@@ -114,9 +113,11 @@ With a passion for technology and innovation, I am equipped to contribute to dyn
                     <div class="progress-bar" style="width: 85%;"></div>
                 </div>
             </div>
+
         </div>
         <div class="skills-container technical-skills">
-            <h1><i class="fas fa-laptop-code"></i>Technical Skills</h1>
+            <h1><i class="fas fa-laptop-code"></i> Technical Skills</h1>
+            <!-- [Previous technical skills content] -->
             <div class="skill">
                 <span>JavaScript</span>
                 <div class="progress">
@@ -148,26 +149,62 @@ With a passion for technology and innovation, I am equipped to contribute to dyn
                 </div>
             </div>
         </div>
+    
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact"  class="contact">
+    <div id="chatbot-btn" class="chatbot-trigger">
+        <div class="bot-icon">
+            <i class="fas fa-robot"></i>
+        </div>
+    </div>
+    
+    <div id="chatbot-window" class="chatbot">
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <i class="fas fa-robot"></i>
+                <h3>Portfolio Assistant</h3>
+                <span class="status-indicator">Online</span>
+            </div>
+            <button id="close-btn" aria-label="Close chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    
+        <div id="chat-content" class="chat-content">
+            <div class="message bot-message">
+            </div>
+        </div>
+    
+        <div class="chat-suggestions">
+            <button class="suggestion-chip">About Me</button>
+            <button class="suggestion-chip">Skills</button>
+            <button class="suggestion-chip">Contact Info</button>
+        </div>
+    
+        <div class="chat-input">
+            <input type="text" 
+                   id="user-input" 
+                   placeholder="Type your message..." 
+                   aria-label="Chat message">
+            <button id="send-btn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    
+    <section id="contact" class="contact">
         <h2><i class="fas fa-envelope"></i> Contact Me</h2>
-        <P>Email: <a href="mailto:indiphilembukwana@gmail.com">indiphilembukwane@gmail.com</a></P>
-        <P>Phone: 0655176820</P>
+        <p>Email: <a href="mailto:indiphilembukwana@gmail.com">indiphilembukwana@gmail.com</a></p>
+        <p>Phone: 0655176820</p>
         <form>
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
-
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
-
             <label for="message">Message</label>
             <textarea id="message" name="message" required></textarea>
-
             <input type="submit" value="Send Message">
         </form>
     </section>
-
 </body>
 </html>
