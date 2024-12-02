@@ -12,7 +12,6 @@ Sections: Home, Education, Skills, and About Me.
 
 Links to my social profiles: Facebook, Email, and LinkedIn.
 
-Contact information, including my phone number for direct calls.
 # Tools Used
 CodePen
 
