@@ -36,11 +36,11 @@ Code Editor
 Download and install any code editor (e.g., Visual Studio Code, Notepad++).
 Git
 
-# Download and install Git Bash for version control.
-How to Run the Project
+ Download and install Git Bash for version control.
+# How to Run the Project
 
 You can view my portfolio by clicking this link:
-➡️ My Portfolio
+https://mbukwana.github.io/indiphileMbukwana/
 
 # Contact Me
 Email: indiphilembukwana@gmail.com
