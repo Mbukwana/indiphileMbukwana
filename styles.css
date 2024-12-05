@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indiphile+Mbukwana:wght@500&display=swap');
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Indiphile Mbukwana', Mbukwana-serif;
   box-sizing: border-box;
 }
 
@@ -19,65 +19,86 @@
   position: relative; /* For overlay positioning */
 }
 
-/* Fixed Navigation Bar */
-nav {
+.navbar {
+  padding: 1rem;
+  background: #800000;
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH7fZoNxiz4pA3q-R9KvUD1M6ibdhxC0TLvA&usqp=CAU"); /* Same background as hero */
-  background-size: cover;
-  background-position: center;
-  padding-top: 20px; /* Adjust as needed */
-  padding-left: 8%;
-  padding-right: 8%;
-  z-index: 1000; /* Keep nav on top */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Add shadow for visibility */
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-menu {
   display: flex;
-  justify-content: space-between; /* This ensures logo and menu are on left, button on right */
-  align-items: center; /* Vertically center the items */
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  list-style: none;
 }
 
-/* Transparent overlay for nav background */
-nav::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-  z-index: -1; /* Place behind text */
-}
-
-/* Navigation styling */
-nav .logo {
-  color: white;
-  cursor: pointer;
-  font-size: 35px;
-  letter-spacing: 1px;
-}
-
-nav ul {
-  display: flex; /* Flex for horizontal menu items */
-  list-style-type: none;
-}
-
-nav ul li {
-  display: inline-block;
-  padding: 10px 30px;
-}
-
-nav ul li a {
-  color: white;
+.nav-menu a {
+  color: #FFFFFF;
   text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
 }
 
-nav ul li a:hover {
-  color: #f9004d;
-  transition: .4s;
+.nav-menu a:hover {
+  color: #FFD700;
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+      display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      background-color: #800000;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      padding: 2rem 0;
+  }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-menu li {
+      margin: 16px 0;
+  }
+}
 span {
   color: #f9004d;
 }
@@ -106,9 +127,11 @@ span {
   transform: translateY(-50%);
 }
 /* Profile Picture */
-.profile-pic-container {
-  margin-left: 170%;
+.pr.profile-pic-container {
+  margin-left: 50%;
+  
 }
+
 
 .profile-pic {
   width: 250px;  /* Adjust the size of the profile picture */
@@ -509,3 +532,333 @@ section h2 {
     font-size: 16px;
   }
 }
+
+/* Chatbot Container Styles */
+.chatbot-trigger {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: #800000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  z-index: 1000;
+}
+
+.chatbot-trigger:hover {
+  transform: scale(1.1);
+}
+
+.bot-icon {
+  color: white;
+  font-size: 24px;
+}
+
+.chatbot {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 350px;
+  height: 500px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* Header Styles */
+.chatbot-header {
+  padding: 15px 20px;
+  background: #800000;
+  color: #FFFFFF;
+}
+
+.chatbot-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chatbot-title h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.status-indicator {
+  font-size: 12px;
+  color: #4CAF50;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3px 8px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+#close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  float: right;
+}
+
+/* Chat Content Styles */
+.chat-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #f5f5f5;
+}
+
+.message {
+  margin-bottom: 15px;
+  max-width: 80%;
+  clear: both;
+}
+
+.bot-message {
+  float: left;
+}
+
+.user-message {
+  float: right;
+}
+
+.message-content {
+  padding: 12px 16px;
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.bot-message .message-content {
+  background: #FFFFFF;
+  color: #333333;
+  border-bottom-left-radius: 5px;
+}
+
+.user-message .message-content {
+  background: #800000;
+  color: #FFFFFF;
+  border-bottom-right-radius: 5px;
+}
+
+.message-time {
+  font-size: 11px;
+  color: #888;
+  margin-top: 5px;
+  text-align: right;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  padding: 15px;
+  display: flex;
+  gap: 5px;
+}
+
+.typing-indicator span {
+  width: 8px;
+  height: 8px;
+  background: #90949c;
+  border-radius: 50%;
+  animation: typing 1s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Suggestion Chips */
+.chat-suggestions {
+  padding: 10px 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.suggestion-chip {
+  background: #F5F5F5;
+  color: #800000;
+  padding: 8px 15px;
+  border-radius: 15px;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s;
+}
+
+.suggestion-chip:hover {
+  background: #FFD700;
+}
+
+/* Input Area */
+.chat-input {
+  padding: 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 10px;
+  background: white;
+}
+
+#user-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+}
+
+#user-input:focus {
+  border-color: #800000;
+}
+
+#send-btn {
+  background: #800000;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+#send-btn:hover {
+  transform: scale(1.1);
+  background: #530563;
+}
+
+/* Scrollbar Styles */
+.chat-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.chat-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.chat-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Add these media queries at the end of your CSS file */
+
+@media screen and (max-width: 1024px) {
+  .content {
+    left: 5%;
+  }
+  
+  .profile-pic-container {
+    margin-left: 120%;
+  }
+  
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 15px 5%;
+    flex-direction: column;
+  }
+  
+  nav ul li {
+    padding: 8px 15px;
+  }
+  
+  .content {
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .profile-pic-container {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  
+  h1 {
+    font-size: 40px;
+  }
+  
+  h3 {
+    font-size: 20px;
+  }
+  
+  .newslatter form {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav .logo {
+    font-size: 25px;
+  }
+  
+  nav ul {
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+  
+  h1 {
+    font-size: 32px;
+  }
+  
+  .share {
+    width: 90%;
+    left: 5%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .content {
+    position: relative;
+    padding: 100px 0;
+  }
+}
+
